@@ -9,23 +9,23 @@ class TabLink {
           this.cards = document.querySelectorAll(`.card[data-tab='${this.tabData}']`);
       }
       
-      this.cards.forEach( card => new TabCard(card));
-      
-//      this.selectTab = 
-      // Add a click event that invokes this.selectTab
-    // this.tabElement.addEventListener();
+      this.cards.forEach( card =>
+           new TabCard(card));      
+
+      this.tabElement.addEventListener('click', () => this.selectTab());
     }
     
     selectTab() {
      const tabs = document.querySelectorAll('.tab');
     
      tabs.forEach ( tab => tab.classList.remove('.active-tab') );
+    this.tabElement.classList.add('.active-tab');
 
      const cards = document.querySelectorAll('.card');
      
      cards.forEach( card => card.style.display = 'none');
     this.tabElement.classList.add('.active-tab');
-  
+        
      this.cards.forEach(card => card.selectCard());
   }
 }
