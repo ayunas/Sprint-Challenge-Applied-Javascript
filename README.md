@@ -31,14 +31,21 @@ Demonstrate your understanding of this week's concepts by answering the followin
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager
 
 1. What is the DOM?
+The DOM stands for "document object model'  It turns the html / css document into a giant javascript object that can be manipulated using javascript.
 
 2. What is an event?
+an event is any end-user initiated action that javascript is waiting to take place.  examples are when the user clicks a mouse or scrolls down on the page, or copys something on the page.
+
 
 3. What is an event listener?
+an event listener is a method on an object that allows the browser to wait for events that are initiated by the end user and to subsequently carry out some function.  
+
+
 
 4. Why would we convert a NodeList into an Array?
+so we could carry out all of the methods that are avilable to us using an array. 
 
-5. What is a component?
+5. What is a component?  a component is a reusable piece of code written in html/css/javascript that can be cut and pasted and reproduce similar functionality.  Bootstrap is a library of different components that can be used.  
 
 ### Git Set up
 
