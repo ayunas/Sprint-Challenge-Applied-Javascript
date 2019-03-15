@@ -5,9 +5,10 @@ class TabLink {
       
       if (this.tabData === 'all') {
           this.cards = document.querySelectorAll('.card');
-      } 
-      
-      
+      } else {
+          this.cards = document.querySelectorAll(`.card[data-tab='${this.tabData}']`);
+          console.log(this.cards);
+      }
   }
    
     print() {
