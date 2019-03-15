@@ -1,5 +1,23 @@
 class TabLink {
   constructor(tabElement){
+      this.tabElement = tabElement;
+      this.tabData = tabElement.dataset.tab;
+      
+      if (this.tabData === 'all') {
+          this.cards = document.querySelectorAll('.card');
+      } 
+      
+      
+  }
+   
+    print() {
+        console.log(this.tabData);
+    }
+
+    
+}
+
+
     // assign this.tabElement to the tabElement DOM reference
     // this.tabElement;
     
@@ -62,11 +80,28 @@ class TabCard {
 
 /* START HERE: 
 
-- Select all classes named ".tab" and assign that value to the tabs variable
 
-- With your selection in place, now chain a .forEach() method onto the tabs variable to iterate over the DOM NodeList
 
-- In your .forEach() method's callback function, return a new instance of TabLink and pass in each tab as a parameter
+  why does deleting this comment comment out everything below this line!*/
+      
+//- Select all classes named ".tab" and assign that value to the tabs variable
 
-*/
-let tabs = document.querySelectorAll();
+let tabs = document.querySelectorAll('.tab');
+
+
+//- With your selection in place, now chain a .forEach() method onto the tabs variable to iterate over the DOM NodeList.  checking to see that each tab is indeed being returned.
+
+//tabs.forEach( tab => console.log(tab));
+
+//- In your .forEach() method's callback function, return a new instance of TabLink and pass in each tab as a parameter
+
+tabs.forEach( tab => new TabLink(tab) );
+
+//so how do you gain access to each individual tab JS object created with the constructor function?
+
+
+
+
+
+
+      
